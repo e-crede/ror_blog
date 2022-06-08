@@ -1,24 +1,26 @@
-# README
+Ruby on Rails Blogging platform
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TODO's
 
-Things you may want to cover:
+Reader Perspecive:  
+[ ] basic layout  
+    [ ] posts list  
+    [ ] post  
+    [ ] Header/Footer  
+    [ ] Landing Page  
+[ ] RSS Feed  
+[ ] URLs - Slugs  
 
-* Ruby version
+Creator perspective:  
+[ ] User Authentication  
+[ ] markdown to HTML (alt. WYSIWYG)  
+[ ] Image Upload  
+[ ] page views count  
 
-* System dependencies
+Admin Perspective:
+[ ] Admin Panel  
+[ ] Backup processes  
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Technologies:  
+[x] Ruby on Rails 7  
+[x] Tailwind CSS  
