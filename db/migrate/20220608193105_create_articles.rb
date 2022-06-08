@@ -5,7 +5,7 @@ class CreateArticles < ActiveRecord::Migration[7.0]
       t.string :slug
       t.string :content
       t.integer :views
-
+      t.boolean :published, default: false, null: false
       t.timestamps
     end
   end

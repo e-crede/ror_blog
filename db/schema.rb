@@ -16,6 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_193105) do
     t.string "slug"
     t.string "content"
     t.integer "views"
+    t.boolean "published", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
