@@ -9,15 +9,16 @@ Reader Perspecive:
     [ ] Header/Footer  
     [ ] Landing Page  
 [ ] RSS Feed  
-[ ] URLs - Slugs  
+[x] URLs - Slugs  
 
 Creator perspective:    
 [ ] markdown to HTML (alt. WYSIWYG)  
 [ ] Image Upload  
-[ ] page views count  
+[ ] page views count
+[ ] tags  
 
 Admin Perspective:
-[ ] Authentication
+[x] Authentication
 [ ] Admin Panel  
 [ ] Backup processes  
 

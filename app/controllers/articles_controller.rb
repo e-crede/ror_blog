@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: %i[ index show_by_slug ]
+  before_action :set_article_by_slug, only: %i[ show_by_slug ]
   before_action :set_article, only: %i[ show edit update destroy ]
 
   # GET /articles or /articles.json
@@ -58,14 +59,21 @@ class ArticlesController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_article
-      @article = Article.find(params[:id])
-    end
+  def show_by_slug
+    render 'show'
+  end
 
-    # Only allow a list of trusted parameters through.
-    def article_params
-      params.require(:article).permit(:title, :slug, :content, :views)
-    end
+  private
+
+  def set_article
+    @article = Article.find(params[:id])
+  end
+
+  def set_article_by_slug
+    @article = Article.find_by(slug: params[:slug])
+  end
+
+  def article_params
+    params.require(:article).permit(:title, :slug, :content, :views)
+  end
 end
