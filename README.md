@@ -33,5 +33,5 @@ DevOps
  
 Technologies:  
 [x] Ruby on Rails 7  
-[x] Tailwind CSS
+[x] Tailwind CSS (https://tailwindcss.com/docs/guides/ruby-on-rails)
 
