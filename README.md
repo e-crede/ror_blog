@@ -6,8 +6,8 @@ Reader Perspecive:
 [ ] basic layout  
     [ ] posts list  
     [ ] post  
-    [ ] Header/Footer  
-    [ ] Landing Page  
+    [x] Header/Footer  
+    [x] Landing Page  
 [ ] RSS Feed  
 [x] URLs - Slugs  
 

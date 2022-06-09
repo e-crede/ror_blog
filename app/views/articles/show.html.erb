@@ -1,15 +1,18 @@
-<div class="mx-auto md:w-2/3 w-full flex">
-  <div class="mx-auto">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-    <% end %>
-
-    <%= render @article %>
-
-    <%= link_to 'Edit this article', edit_article_path(@article), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to 'Destroy this article', article_path(@article), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-    </div>
-    <%= link_to 'Back to articles', articles_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-  </div>
+<div class="container mx-auto px-4">
+    <%= render partial: 'article_read', object: @article %>
 </div>
+<hr>
+
+<% if user_signed_in?%>
+<br>
+<div class="flex justify-center px-5 ">
+<div class="block p-6 rounded-lg shadow-lg bg-sky-500 max-w-sm px-5 py-5">
+<h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Creator Area</h5>
+<%= link_to 'Edit post', edit_article_path(@article), class: "mt-2 rounded-lg py-3 px-5 bg-amber-200 inline-block font-medium" %>
+<div class="inline-block ml-2">
+<%= button_to 'Delete post', article_path(@article), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-red-300 font-medium" %>
+</div>
+</div>
+</div>
+<br>
+<% end %>
