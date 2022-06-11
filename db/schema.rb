@@ -14,9 +14,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_193105) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.string "slug"
-    t.string "content"
+    t.string "brief"
+    t.string "content_md"
+    t.string "content_html"
     t.integer "views"
     t.boolean "published", default: false, null: false
+    t.boolean "show_in_feed", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

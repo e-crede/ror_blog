@@ -22,18 +22,24 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :content %>
-    <%= form.text_area :content, rows: 40, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label :brief %>
+    <%= form.text_area :brief, rows: 3, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :views %>
-    <%= form.number_field :views, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label :content_md %>
+    <%= form.text_area :content_md, rows: 35, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
-    <div class="my-5">
-    <%= form.label :published, style: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-    <%= form.check_box :published %>
-    </div>
+
+  <div class="my-5">
+  <%= form.label :published, style: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  <%= form.check_box :published %>
+  </div>
+
+  <div class="my-5">
+  <%= form.label :show_in_feed, style: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  <%= form.check_box :show_in_feed %>
+  </div>
 
   <div class="inline">
     <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>

@@ -24,7 +24,8 @@ class ArticlesController < ApplicationController
   # POST /articles or /articles.json
   def create
     @article = Article.new(article_params)
-
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+    @article[:content_html] = markdown.render(@article[:content_md])
     respond_to do |format|
       if @article.save
         format.html { redirect_to article_url(@article), notice: "Article was successfully created." }
@@ -74,6 +75,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :slug, :content, :views, :published)
+    params.require(:article).permit(:title, :slug, :content_md, :views, :published, :show_in_feed, :brief)
   end
 end
