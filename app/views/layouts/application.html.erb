@@ -11,6 +11,9 @@
 
   <body>
     <%= render 'layouts/components/navbar' %>
+    <% if request.path == root_path %>
+    <%= render 'layouts/components/landing' %>
+    <% end %>
     <div class="container my-24 px-6 mx-auto">
     <%= render 'layouts/components/notice' %>
     <%= yield %>

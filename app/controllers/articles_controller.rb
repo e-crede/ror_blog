@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
   # POST /articles or /articles.json
   def create
     @article = Article.new(article_params)
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+    markdown = init_markdown
     @article[:content_html] = markdown.render(@article[:content_md])
     respond_to do |format|
       if @article.save
@@ -40,7 +40,10 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1 or /articles/1.json
   def update
     respond_to do |format|
+      # @article[:content_html] = markdown.render(@article[:content_md])
       if @article.update(article_params)
+        markdown = init_markdown
+        @article.update(content_html: markdown.render(@article[:content_md]))
         format.html { redirect_to article_url(@article), notice: "Article was successfully updated." }
         format.json { render :show, status: :ok, location: @article }
       else
@@ -76,5 +79,10 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title, :slug, :content_md, :views, :published, :show_in_feed, :brief)
+  end
+
+  def init_markdown
+    extensions = { no_intra_emphasis: true, fenced_code_blocks: true, disable_indented_code_blocks: true, strikethrough: true, lax_spacing: true, superscript: true, highlight: true, quote: true, footnotes: true, autolink: true, tables: true}
+    Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions)
   end
 end

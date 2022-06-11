@@ -7,18 +7,25 @@ Reader Perspecive:
     [x] posts list  
     [x] post  
     [x] Header/Footer  
-    [x] Landing Page  
+    [x] Landing Paged
+[ ] Advanced layout
+    [ ] landing pg images
+    [ ] post header img
+    [ ] post formatting
+    [ ] categories display
 [ ] RSS Feed  
 [x] URLs - Slugs  
 
 Creator perspective:    
-[ ] markdown to HTML (alt. WYSIWYG)  
-[ ] Image Upload  
-[ ] page views count
+[x] markdown to HTML (alt. WYSIWYG)
+[ ] slug auto generate
+[ ] brief auto generate  
+[ ] Image Upload
 [ ] tags  
 
 Admin Perspective:
 [x] Authentication
+    [ ] 
 [ ] Admin Panel  
 [ ] Backup processes  
 
