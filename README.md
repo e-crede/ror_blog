@@ -3,42 +3,42 @@ Ruby on Rails Blogging platform
 TODO's
 
 Reader Perspecive:  
-[x] basic layout  
-    [x] posts list  
-    [x] post  
-    [x] Header/Footer  
-    [x] Landing Paged
-[ ] Advanced layout
-    [ ] landing pg images
-    [ ] post header img
-    [ ] post formatting
-    [ ] categories display
-[ ] RSS Feed  
-[x] URLs - Slugs  
+- [x] basic layout  
+    - [x] posts list  
+    - [x] post  
+    - [x] Header/Footer  
+    - [x] Landing Paged
+- [ ] Advanced layout
+    - [ ] landing pg images
+    - [ ] post header img
+   -  [ ] post formatting
+   -  [ ] categories display
+- [ ] RSS Feed  
+- [x] URLs - Slugs  
 
 Creator perspective:    
-[x] markdown to HTML (alt. WYSIWYG)
-[ ] slug auto generate
-[ ] brief auto generate  
-[ ] Image Upload
-[ ] tags  
+- [x] markdown to HTML (alt. WYSIWYG)
+- [ ] slug auto generate
+- [ ] brief auto generate  
+- [ ] Image Upload
+- [ ] tags  
 
 Admin Perspective:
-[x] Authentication
-    [ ] 
-[ ] Admin Panel  
-[ ] Backup processes  
+- [x] Authentication
+    - [ ] manual signup confirmation
+- [ ] Admin Panel  
+- [ ] Backup processes  
 
 QA  
-[ ] Rspec Tests  
+- [ ] Rspec Tests  
 
 DevOps  
-[ ] Deployment workflow  
-    [ ] Manual 
-    [ ] Automatic  
+- [ ] Deployment workflow  
+    - [ ] Manual 
+    - [ ] Automatic  
 
  
 Technologies:  
-[x] Ruby on Rails 7  
-[x] Tailwind CSS (https://tailwindcss.com/docs/guides/ruby-on-rails)
+- [x] Ruby on Rails 7  
+- [x] Tailwind CSS (https://tailwindcss.com/docs/guides/ruby-on-rails)
 
