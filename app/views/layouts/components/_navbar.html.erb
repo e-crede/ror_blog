@@ -25,10 +25,20 @@
             <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
               href="<%= post_path('about') %>" data-mdb-ripple="true" data-mdb-ripple-color="light">About</a>
           </li>
-          <% if user_signed_in?%>
+
+          <% if user_signed_in? %>
           <li class="nav-item mb-2 lg:mb-0">
             <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
               href="<%= new_article_path %>" data-mdb-ripple="true" data-mdb-ripple-color="light">New Article</a>
+          </li>
+          <li class="nav-item mb-2 lg:mb-0">
+          <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"  %>
+          </li>
+          <% end %>
+          <% unless user_signed_in? %>
+                    <li class="nav-item mb-2 lg:mb-0">
+            <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
+              href="<%= new_user_session_path %>" data-mdb-ripple="true" data-mdb-ripple-color="light">Login</a>
           </li>
           <% end %>
         </ul>
