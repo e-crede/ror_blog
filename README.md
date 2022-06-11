@@ -3,9 +3,9 @@ Ruby on Rails Blogging platform
 TODO's
 
 Reader Perspecive:  
-[ ] basic layout  
-    [ ] posts list  
-    [ ] post  
+[x] basic layout  
+    [x] posts list  
+    [x] post  
     [x] Header/Footer  
     [x] Landing Page  
 [ ] RSS Feed  
