@@ -9,8 +9,8 @@ Reader Perspecive:
     - [x] Header/Footer  
     - [x] Landing Paged
 - [ ] Advanced layout
-    - [ ] landing pg images
-    - [ ] post header img
+    - [x] landing pg images
+    - [x] post header img
    -  [ ] post formatting
    -  [ ] categories display
 - [ ] RSS Feed  
