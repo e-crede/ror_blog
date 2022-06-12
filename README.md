@@ -27,7 +27,7 @@ Admin Perspective:
 - [x] Authentication
     - [ ] manual signup confirmation
 - [ ] Admin Panel  
-- [ ] Backup processes  
+- [x] Backup processes  
 
 QA  
 - [ ] Rspec Tests  

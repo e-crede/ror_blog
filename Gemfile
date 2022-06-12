@@ -48,6 +48,7 @@ gem "bootsnap", require: false
 
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'redcarpet', '~> 3.5', '>= 3.5.1'
+gem 'rufus-scheduler'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
