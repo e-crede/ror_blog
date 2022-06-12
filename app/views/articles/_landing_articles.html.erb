@@ -1,5 +1,5 @@
   <section class="mb-32 text-gray-800 text-center md:text-left">
-    <h2 class="text-3xl font-bold mb-12 text-center">Latest posts</h2>
+    <h2 class="text-3xl font-bold mb-12 text-center"></h2>
     <div class="flex flex-wrap mb-6">
     <%= render @articles.where(published: true, show_in_feed:true).order(:created_at).reverse_order %>
     </div>

@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RorBlog</title>
+    <title>My Blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
-
   <body>
     <%= render 'layouts/components/navbar' %>
+        <%= render 'layouts/components/notice' %>
     <% if request.path == root_path %>
     <%= render 'layouts/components/landing' %>
     <% end %>
     <div class="container my-24 px-6 mx-auto">
-    <%= render 'layouts/components/notice' %>
     <%= yield %>
     </div>
     <%= render 'layouts/components/footer' %>

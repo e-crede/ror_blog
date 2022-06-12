@@ -17,6 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_193105) do
     t.string "brief"
     t.string "content_md"
     t.string "content_html"
+    t.string "image"
     t.integer "views"
     t.boolean "published", default: false, null: false
     t.boolean "show_in_feed", default: false, null: false
