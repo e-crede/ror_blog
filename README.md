@@ -11,14 +11,14 @@ Reader Perspecive:
 - [ ] Advanced layout
     - [x] landing pg images
     - [x] post header img
-   -  [ ] post formatting
+   -  [x] post formatting
    -  [ ] categories display
 - [ ] RSS Feed  
 - [x] URLs - Slugs  
 
 Creator perspective:    
 - [x] markdown to HTML (alt. WYSIWYG)
-- [ ] slug auto generate
+- [x] slug auto generate
 - [ ] brief auto generate  
 - [ ] Image Upload
 - [ ] tags  

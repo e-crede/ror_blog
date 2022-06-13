@@ -26,6 +26,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     markdown = init_markdown
     @article[:content_html] = markdown.render(@article[:content_md])
+    @article[:slug] = generate_slug(@article)
     respond_to do |format|
       if @article.save
         format.html { redirect_to article_url(@article), notice: "Article was successfully created." }
@@ -77,12 +78,21 @@ class ArticlesController < ApplicationController
     @article = Article.find_by(slug: params[:slug])
   end
 
+  # Generates a slug from title
+  # Uniq constraint checked within model
+  def generate_slug(article)
+    return article.slug unless article.slug.empty?
+
+    article.title.force_encoding('ascii').gsub(' ', '-').downcase
+  end
+
   def article_params
     params.require(:article).permit(:title, :slug, :content_md, :views, :published, :show_in_feed, :brief, :image)
   end
 
   def init_markdown
     extensions = { no_intra_emphasis: true, fenced_code_blocks: true, disable_indented_code_blocks: true, strikethrough: true, lax_spacing: true, superscript: true, highlight: true, quote: true, footnotes: true, autolink: true, tables: true}
-    Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions)
+    red_html = Redcarpet::Render::HTML.new( { filter_html: false } )
+    Redcarpet::Markdown.new(red_html, extensions)
   end
 end
