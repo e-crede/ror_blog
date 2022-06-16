@@ -12,7 +12,7 @@ Reader Perspecive:
     - [x] landing pg images
     - [x] post header img
    -  [x] post formatting
-   -  [ ] categories display
+   -  [x] categories display
 - [ ] RSS Feed  
 - [x] URLs - Slugs  
 
@@ -21,7 +21,7 @@ Creator perspective:
 - [x] slug auto generate
 - [ ] brief auto generate  
 - [ ] Image Upload
-- [ ] tags  
+- [x] categorisaion/tags (enum) 
 
 Admin Perspective:
 - [x] Authentication
